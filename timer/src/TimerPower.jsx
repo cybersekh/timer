@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 function TimerPower() {
-    const [totalTimeInSeconds, setTotalTimeInSeconds] = useState ( 10 * 60 );
+    const [totalTimeInSeconds, setTotalTimeInSeconds] = useState ( 6 * 60 );
 
     const minutes = Math.floor (totalTimeInSeconds / 60 );
     const seconds = totalTimeInSeconds % 60
@@ -21,10 +21,6 @@ function TimerPower() {
             <span>{minutes.toString().padStart(2, "0")}</span>
             <span>:</span>
             <span>{seconds.toString().padStart(2, "0")}</span>
-            <div className="button-wrap">
-                <button className="button-start">Começar</button>
-                <button className="button-stop">Parar</button>
-            </div>
         </div>
     )
 }
